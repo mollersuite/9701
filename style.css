@@ -14,7 +14,7 @@ body {
     border: 4px solid lightgray;
   }
   html {
-    background: linear-gradient(to top right, red, blue);
+    background: linear-gradient(to top right, red, blue) fixed;
     height: 100%;
   }
 }

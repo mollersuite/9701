@@ -1,0 +1,17 @@
+body {
+  max-width: 500px;
+  margin: auto;
+  font-family: sans-serif;
+  text-align: center;
+}
+p, h2 {
+  text-align: left;
+}
+title {
+  font-size: xx-large;
+  display: block;
+  font-weight: bold;
+}
+.center {
+  text-align: center;
+}

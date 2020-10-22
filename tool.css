@@ -1,55 +1,55 @@
-  @media (prefers-color-scheme: dark) {
-    body {
-      background: #1a1a1a;
-    }
-    a {
-      color: skyblue;
-    }
-  }
-
-  @media (min-width: 1122px) {
-    main {
-      background-image: url(/bg.svg);
-      background-repeat: no-repeat;
-    }
-    a {
-      color: skyblue;
-    }
-  }
-
+@media (prefers-color-scheme: dark) {
   body {
-    color: white;
-    font-family: sans-serif;
+    background: #1a1a1a;
   }
-
-  @media (max-width: 1121px) {
-    main {
-      color: black;
-    }
+  a {
+    color: skyblue;
   }
+}
 
-  @media (max-width: 1121px) and (prefers-color-scheme: dark) {
-    main {
-      color: white;
-    }
-  }
-
+@media (min-width: 1122px) {
   main {
-    position: absolute;
-    top: 0;
-    z-index: -10;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    background-image: url(/bg.svg);
+    background-repeat: no-repeat;
   }
+  a {
+    color: skyblue;
+  }
+}
+
+body {
+  color: white;
+  font-family: sans-serif;
+}
+
+@media (max-width: 1121px) {
+  main {
+    color: black;
+  }
+}
+
+@media (max-width: 1121px) and (prefers-color-scheme: dark) {
+  main {
+    color: white;
+  }
+}
+
+main {
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 .center {
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

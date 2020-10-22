@@ -10,18 +10,13 @@
   @media (min-width: 1122px) {
     main {
       background-image: url(/bg.svg);
-      animation: move 15s ease infinite alternate;
       background-repeat: no-repeat;
     }
     a {
       color: skyblue;
     }
   }
-@media (min-width: 1921px) {
-  main {
-    background-size: 100%;
-  }
-}
+
   body {
     color: white;
     font-family: sans-serif;
@@ -53,15 +48,6 @@
     text-align: center;
   }
 
-  @keyframes move {
-    from {
-      background-position: 0 0;
-    }
-
-    to {
-      background-position: -100%;
-    }
-  }
 .center {
   display:flex;
   justify-content:center;

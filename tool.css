@@ -9,7 +9,8 @@
 
   @media (min-width: 1122px) {
     main {
-      background: url(/bg.svg);
+      background-image: url(/bg.svg);
+      animation: move 15s ease infinite alternate;
     }
     a {
       color: skyblue;
@@ -45,4 +46,14 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  @keyframes move {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: -100%;
+    }
   }

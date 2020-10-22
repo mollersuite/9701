@@ -17,7 +17,11 @@
       color: skyblue;
     }
   }
-
+@media (min-width: 1921px) {
+  main {
+    background-size: 100%;
+  }
+}
   body {
     color: white;
     font-family: sans-serif;

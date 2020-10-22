@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="96"
+   inkscape:export-xdpi="96"
+   inkscape:export-filename="C:\Users\Jack5\downloads\banner.png"
+   height="1080"
+   width="1920"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="banner.svg"
+   id="svg12"
+   version="1.1"
+   viewBox="0 0 1920 1080">
+  <style
+     id="style848"></style>
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg12"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="12205.088"
+     inkscape:cx="17660.676"
+     inkscape:zoom="0.022842864"
+     showgrid="false"
+     id="namedview14"
+     inkscape:window-height="1017"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     inkscape:document-rotation="0" />
+  <path
+     style="stroke-width:14.7088;"
+     id="path10"
+     d="m 2050.4517,-607.3049 c 176.5052,154.44207 376.5444,275.05396 463.3262,460.38444 85.3108,185.330465 58.8351,436.85046 -35.3011,695.72476 -92.6652,260.3452 -252.9908,528.0448 -457.4427,548.6371 -204.452,19.1214 -454.501,-210.3354 -722.2006,-330.9473 C 1029.6631,644.4113 741.3712,631.1734 566.33686,479.6731 391.30251,328.1728 330.99656,36.939105 441.31233,-160.15835 c 108.84488,-198.56837 388.31148,-304.4715 604.53037,-451.55918 216.2189,-147.08768 367.7192,-336.83079 520.6904,-336.83079 152.9712,0 307.4134,186.80135 483.9186,341.24342 z"
+     fill="#ff0066" />
+  <text
+     id="text842"
+     y="229.28273"
+     x="840.69293"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:161.562px;line-height:1.25;font-family:Inter;-inkscape-font-specification:Inter;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.03904"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Inter;-inkscape-font-specification:Inter;fill:#ffffff;stroke-width:4.03904"
+       y="229.28273"
+       x="840.69293"
+       id="tspan840"
+       sodipodi:role="line">Coming soon.</tspan><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:66.6667px;font-family:Inter;-inkscape-font-specification:Inter;fill:#ffffff;stroke-width:4.03904"
+       id="tspan844"
+       y="431.23523"
+       x="840.69293"
+       sodipodi:role="line">9701.ml</tspan></text>
+  <circle
+     r="177.84547"
+     cy="684.02106"
+     cx="257.19193"
+     id="path846"
+     style="fill:#ff0066;fill-opacity:1;stroke:#ff0066;stroke-width:5.15906;stroke-opacity:1" />
+</svg>

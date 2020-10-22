@@ -2,11 +2,17 @@
     body {
       background: #1a1a1a;
     }
+    a {
+      color: skyblue;
+    }
   }
 
   @media (min-width: 1122px) {
     main {
       background: url(/bg.svg);
+    }
+    a {
+      color: skyblue;
     }
   }
 

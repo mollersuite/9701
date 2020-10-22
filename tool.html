@@ -11,9 +11,28 @@
           background: #1a1a1a;
         }
       }
+
+      @media (min-width: 1122px) {
+        main {
+          background: url(/bg.svg);
+        }
+      }
+
       body {
         color: white;
         font-family: sans-serif;
+      }
+
+      @media (max-width: 1121px) {
+        main {
+          color: black;
+        }
+      }
+
+      @media (max-width: 1121px) and (prefers-color-scheme: dark) {
+        main {
+          color: white;
+        }
       }
 
       main {
@@ -23,7 +42,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: url(/bg.svg);
         float: right;
         display: flex;
         justify-content: center;

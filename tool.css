@@ -53,3 +53,6 @@ main {
   justify-content: center;
   align-items: center;
 }
+textarea {
+  resize: horizontal;
+}

@@ -29,14 +29,17 @@ function populateSearch({ items: tree }) {
   })
 };
 
-async function main () {
+async function main() {
   /**
    * @type {github}
    */
   const gh = await fetch(`https://api.github.com/search/code?q=${encodeURIComponent(search)} in:file+language:html+repo:9701ml/9701ml.github.io`).then(res => res.json())
-  console.log(gh)
   gh.items = gh.items.filter(({ path }) => { console.log(path); return path.startsWith('tools/') })
-  populateSearch(gh)
+  if (gh.items.length) {
+    populateSearch(gh)
+  } else {
+    document.getElementById('no-results').style.display = 'block'
+  }
 }
 
 main()

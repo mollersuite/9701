@@ -22,9 +22,12 @@ input {
   border-radius: 1em;
   padding: 1em;
 }
-
+form {
+  width: 100%;
+}
 @media (max-width: 425px) {
   form {
+    width: 100%;
     display: grid;
   }
 }

@@ -21,7 +21,7 @@ function populateSearch({ items: tree }) {
     const result = document.createElement('article')
     const link = document.createElement('a')
     link.innerText = doc.querySelector('title').innerText || 'Name not found'
-    link.href = '/tools/' + ele.path
+    link.href = ele.path
     const description = document.createElement('p')
     description.innerText = doc.querySelector('meta[name="description"]').getAttribute('content') || 'Description not found'
     result.append(link, description)

@@ -1,6 +1,7 @@
 @media (prefers-color-scheme: dark) {
   body {
     background: #1a1a1a;
+    color: white;
   }
   a {
     color: skyblue;
@@ -14,7 +15,6 @@ header {
 }
 
 body {
-  color: white;
   font-family: sans-serif;
 }
 

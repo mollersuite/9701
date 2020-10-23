@@ -5,30 +5,16 @@ const params = new URLSearchParams(location.search)
 const search = params.get('s')
 
 /** @typedef {Object} github
- * @property {String} sha
  * @property {{
   path: string
   sha: string
- * }[]} tree
- * @property {Boolean} truncated
- * @property {String} url
+ * }[]} items
  */
-/**
- * @returns {Promise<github>}
-*/
-async function getDir() {
-  /**
-   * @type {github}
-   */
-  const { tree } = await fetch('https://api.github.com/repos/9701ml/9701ml.github.io/git/trees/master?recursive=0').then(res => res.json())
-  const sha = tree.find(obj => obj.path === 'tools').sha
-  return fetch(`https://api.github.com/repos/9701ml/9701ml.github.io/git/trees/${sha}?recursive=1`).then(res => res.json())
-};
 
 /**
  * @param {github} gh
  */
-function populateSearch({ tree }) {
+function populateSearch({ items: tree }) {
   tree.forEach(async ele => {
     const text = await fetch('/tools/' + ele.path).then(res => res.text())
     const doc = new DOMParser().parseFromString(text, 'text/html')
@@ -44,7 +30,11 @@ function populateSearch({ tree }) {
 };
 
 (async () => {
-  const gh = await getDir()
+  /**
+   * @type {github}
+   */
+  const gh = await fetch(`https://api.github.com/search/code?q=${encodeURIComponent(search)} in:file+language:html+repo:9701ml/9701ml.github.io`).then(res => res.json())
+  gh.items = gh.items.filter(({path})=>path.startsWith('tools/'))
   populateSearch(gh)
 })().catch(() => {
   // @ts-ignore

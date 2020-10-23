@@ -2,7 +2,7 @@
 
 const params = new URLSearchParams(location.search)
 
-const search = params.get('s')
+const search = params.get('q')
 
 /** @typedef {Object} github
  * @property {{
@@ -16,7 +16,7 @@ const search = params.get('s')
  */
 function populateSearch({ items: tree }) {
   tree.forEach(async ele => {
-    const text = await fetch('/tools/' + ele.path).then(res => res.text())
+    const text = await fetch(ele.path).then(res => res.text())
     const doc = new DOMParser().parseFromString(text, 'text/html')
     const result = document.createElement('article')
     const link = document.createElement('a')
@@ -29,14 +29,14 @@ function populateSearch({ items: tree }) {
   })
 };
 
-(async () => {
+async function main () {
   /**
    * @type {github}
    */
   const gh = await fetch(`https://api.github.com/search/code?q=${encodeURIComponent(search)} in:file+language:html+repo:9701ml/9701ml.github.io`).then(res => res.json())
-  gh.items = gh.items.filter(({path})=>path.startsWith('tools/'))
+  console.log(gh)
+  gh.items = gh.items.filter(({ path }) => { console.log(path); return path.startsWith('tools/') })
   populateSearch(gh)
-})().catch(() => {
-  // @ts-ignore
-  document.querySelector('#error').style.display = 'block'
-})
+}
+
+main()

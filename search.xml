@@ -5,7 +5,7 @@
   <InputEncoding>[UTF-8]</InputEncoding>
   <Image width="16" height="16" type="image/x-icon">[https://9701.ml/icon.svg]</Image>
   <Url type="text/html" template="https://9701.ml/search">
-    <Param name="s" value="{searchTerms}"/>
+    <Param name="q" value="{searchTerms}"/>
   </Url>
   <moz:SearchForm>[https://9701.ml/]</moz:SearchForm>
 </OpenSearchDescription>

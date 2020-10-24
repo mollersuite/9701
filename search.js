@@ -2,7 +2,7 @@
 
 const params = new URLSearchParams(location.search)
 
-const search = params.get('q')
+const search = params.get('q') || ''
 
 /** @typedef {Object} github
  * @property {{

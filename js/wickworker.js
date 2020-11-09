@@ -5,6 +5,7 @@ importScripts('./jszip.min.js')
 
 self.addEventListener('message', async message => {
   const { data: { blob: proj, text }} = message.data
+  // @ts-ignore
   const zip = await new JSZip().loadAsync(await proj.arrayBuffer())
   const project = JSON.parse(await zip.files['project.json'].async('string')) // .wick files are just .zip files. most of the data is in project.json
 

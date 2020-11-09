@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wicktext</title>
+  <link rel="stylesheet" href="/tool.css">
+  <link rel="icon" href="/icon.svg">
+  <meta name="theme-color" content="#ff0066">
+  <meta name="description" content="Replace all text in a Wick Editor project file with a string.">
+
+  <body>
+    <header>
+      <a href="/"><img src="/icon.svg" alt="9701.ml" width="100"></a>
+    </header>
+    <main>
+      <div>
+        <h1>wicktext</h1>
+        <p>replace all text in a Wick Editor project file with a string</p>
+        <form>
+          <label for="file">Upload a .wick file</label>
+          <input type="file" name="file" id="file" accept=".wick">
+          <label for="text">Replace all text with</label>
+          <input type="text" name="text" id="text" value="bruh" placeholder="bruh">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </main>
+    <script>
+      const form = document.querySelector('form')
+      const worker = new Worker('/js/wickworker.js')
+      worker.addEventListener('message', message => {
+        const link = document.createElement('a')
+        console.log(message.data)
+        link.href = URL.createObjectURL(message.data.blob)
+        link.download = message.data.meta.name + '.wick'
+        link.style.display = 'none'
+        document.body.appendChild(link)
+        link.click()
+        URL.revokeObjectURL(link.href)
+      })
+
+      form.addEventListener('submit', event => {
+        event.preventDefault()
+        const data = new FormData(form)
+        worker.postMessage({ data: { blob: data.get('file'), text: data.get('text') } })
+      })
+    </script>
+  </body>
+
+</html>

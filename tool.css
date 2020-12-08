@@ -1,19 +1,15 @@
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #1a1a1a;
-  }
-  a {
-    color: skyblue;
-  }
+body {
+  background: #1a1a1a;
+}
+
+a {
+  color: skyblue;
 }
 
 @media (min-width: 1122px) {
   main {
     background-image: url(/bg.svg);
     background-repeat: no-repeat;
-  }
-  a {
-    color: skyblue;
   }
 }
 
@@ -22,16 +18,8 @@ body {
   font-family: sans-serif;
 }
 
-@media (max-width: 1121px) {
-  main {
-    color: black;
-  }
-}
-
-@media (max-width: 1121px) and (prefers-color-scheme: dark) {
-  main {
-    color: white;
-  }
+main {
+  color: white;
 }
 
 main {
@@ -61,7 +49,7 @@ textarea {
 form {
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
 form>* {

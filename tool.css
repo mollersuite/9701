@@ -6,10 +6,34 @@ a {
   color: skyblue;
 }
 
+input[type="submit"] {
+  border-radius: 1em;
+  min-width: 5ch;
+  min-height: 5ch;
+}
+
+input[type="search"], input[type="submit"] {
+  box-shadow: 0 0 10px white;
+}
+
+input[type="search"] {
+  border-radius: 2em;
+  padding: 1em;
+  border: darkgray solid 0.2em;
+  transition: 0.3s border-width;
+}
+
+input[type="search"]:focus {
+  border-width: 0.5em;
+}
+
 @media (min-width: 1122px) {
   main {
     background-image: url(/bg.svg);
     background-repeat: no-repeat;
+  }
+  input[type="search"], input[type="submit"] {
+    box-shadow: 0 0 10px black;
   }
 }
 
@@ -54,21 +78,4 @@ form {
 
 form>* {
   margin: 1em;
-}
-
-input[type="submit"] {
-  border-radius: 1em;
-  min-width: 5ch;
-  min-height: 5ch;
-}
-
-input[type="search"] {
-  border-radius: 2em;
-  padding: 1em;
-  border: darkgray solid 0.2em;
-  transition: 0.3s border-width;
-}
-
-input[type="search"]:focus {
-  border-width: 0.5em;
 }

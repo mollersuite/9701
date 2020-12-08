@@ -20,7 +20,7 @@
     </header>
     <main>
       <div>
-        <h1>Coming soon...</h1>
+        <h1 id="splash">Welcome to 9701.ml</h1>
         <form action="/search.html" method="GET">
           <input aria-label="Search" type="search" autofocus name="q" placeholder="Search 9701.ml">
           <input type="submit" value="🔎" title="Search">
@@ -32,6 +32,17 @@
       console.log('%c     9701.ml', 'background: url(https://9701.ml/icon.svg); background-repeat: no-repeat; font-size: 5em; font-family: "Inter", sans-serif;');
       console.log('Check out the source code at', 'https://github.com/9701ml/9701ml.github.io')
       console.log('162917.878.toString(26).substr(0, 7) == "9701.ml"')
+      /**
+       * @type {<Type>(...arr: Type[]) => Type}
+       */
+      const random = (...arr) => arr[Math.floor(Math.random() * arr.length)]
+      document.getElementById('splash').innerText = random(
+        'Terrible web tools from the guy who made Bruh Beagle.',
+        'Welcome to 9701.ml',
+        'Search 9701.ml',
+        'molly moller is funny to me',
+        "i'm stuck in a 9701.ml splash screen factory"
+      )
     </script>
   </body>
 

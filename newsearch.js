@@ -3,7 +3,7 @@ import { install } from 'https://cdn.skypack.dev/@github/hotkey'
 const start = document.createElement('button')
 start.dataset.hotkey = "' '"
 
-start.addEventListener('click', () => {
+start.addEventListener('click', async () => {
   const search = document.createElement('iframe')
   search.src = '/overlaysearch.html'
   search.frameBorder = 0
@@ -11,6 +11,7 @@ start.addEventListener('click', () => {
   search.addEventListener('load', () => {
     search.focus()
     search.contentDocument.querySelector('input').focus()
+    search.contentDocument.querySelector('input').addEventListener('blur', search.remove.bind(search))
   })
 })
 

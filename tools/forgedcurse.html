@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forged curse</title>
+  <link rel="stylesheet" href="/tool.css">
+  <link rel="icon" href="/icon.svg">
+  <meta name="theme-color" content="#ff0066">
+  <meta name="description" content="kinda better frontend for CurseForge">
+
+  <body>
+    <header>
+      <a href="/"><img src="/icon.svg" alt="9701.ml" width="100"></a>
+    </header>
+    <main>
+      <div>
+        <h1>forged curse</h1>
+        <form>
+          <input type="search" name="q" id="q" placeholder="Search for mods..." autofocus required>
+          <input type="text" name="v" id="v" placeholder="Minecraft version" value="1.12.2" required>
+          <input type="submit" value="🔎">
+        </form>
+      </div>
+    </main>
+    <script>
+      document.querySelector('input#v').addEventListener('input', ({ target }) => {
+        if (/1.\d.\d/.test(target.value)) {
+          target.setCustomValidity('')
+        } else { target.setCustomValidity('Not a valid Minecraft version!') }
+      })
+      // https://twitchappapi.docs.apiary.io/#/reference/0/get-addon-description/get-addon-description/200?mc=reference%2F0%2Fget-addon-description%2Fget-addon-description%2F200
+      document.querySelector('form').addEventListener('submit', ev => {
+        ev.preventDefault()
+        const data = new FormData(ev.target)
+        const q = data.get('q')
+        const v = data.get('v')
+
+        fetch('https://addons-ecs.forgesvc.net/api/v2/addon/search?categoryId={categoryID}&gameId={gameId}&gameVersion={gameVersion}&index={index}&pageSize={pageSize}5&searchFilter={searchFilter}§ionId={sectionId}&sort={sort}')
+      })
+    </script>
+    <script src="/newsearch.js" type="module"></script>
+  </body>
+
+</html>

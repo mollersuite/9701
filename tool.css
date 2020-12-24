@@ -25,14 +25,14 @@ input[type="search"], input[type="submit"] {
   box-shadow: 0 0 10px white;
 }
 
-input[type="search"] {
+input[type="search"], input[type="text"] {
   border-radius: 2em;
   padding: 1em;
   border: darkgray solid 0.2em;
   transition: 0.3s border-width;
 }
 
-input[type="search"]:focus {
+input[type="search"]:focus, input[type="text"]:focus {
   border-width: 0.5em;
 }
 
@@ -41,7 +41,7 @@ input[type="search"]:focus {
     background-image: url(/bg.svg);
     background-repeat: no-repeat;
   }
-  input[type="search"], input[type="submit"] {
+  input[type="search"], input[type="submit"], input[type="text"] {
     box-shadow: 0 0 10px black;
   }
 }

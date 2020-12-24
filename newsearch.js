@@ -1,7 +1,7 @@
 import { install } from 'https://cdn.skypack.dev/@github/hotkey'
 
 const start = document.createElement('button')
-start.dataset.hotkey = "' ' '"
+start.dataset.hotkey = "' '"
 
 start.addEventListener('click', () => {
   const search = document.createElement('iframe')

@@ -5,7 +5,7 @@ start.dataset.hotkey = "' ' '"
 
 start.addEventListener('click', () => {
   const search = document.createElement('iframe')
-  search.src = './overlaysearch.html'
+  search.src = '/overlaysearch.html'
   search.frameBorder = 0
   document.body.appendChild(search)
   search.addEventListener('load', () => {

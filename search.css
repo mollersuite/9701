@@ -43,3 +43,15 @@ form {
     margin-bottom: 5px;
   }
 }
+
+@media (max-width: 226px) {
+  input, input[type="search"] {
+    width: 100%;
+  }
+  form {
+    text-align: center;
+  }
+  form * {
+    display: block;
+  }
+}

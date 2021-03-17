@@ -49,13 +49,13 @@
     <script type="module">
       import { install } from 'https://cdn.skypack.dev/@github/hotkey'
 
-        const start = document.createElement('button')
-        start.dataset.hotkey = "` `"
+      const start = document.createElement('button')
+      start.dataset.hotkey = "` `"
 
-        start.addEventListener('click', () => {
-          document.getElementsByName('q').item(0).focus()
-        })
-        install(start)
+      start.addEventListener('click', () => {
+        document.getElementsByName('q').item(0).focus()
+      })
+      install(start)
     </script>
   </body>
 

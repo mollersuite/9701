@@ -6,6 +6,11 @@
   a {
     color: skyblue;
   }
+  input {
+    color: white;
+    background: #2a2a2a;
+    border: solid 1px darkgray;
+  }
 }
 
 header {
@@ -22,12 +27,15 @@ input {
   border-radius: 1em;
   padding: 1em;
 }
+
 form {
   width: 100%;
 }
-@media (max-width: 500px) {
-  form {
-    width: 100%;
-    display: grid;
+
+@media (max-width: 414px) {
+  header {
+    text-align: center;
+    display: block;
+    margin-bottom: 5px;
   }
 }

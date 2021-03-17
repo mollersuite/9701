@@ -34,6 +34,25 @@ article {
   padding: .5em;
 }
 
+@media (min-width: 1122px) {
+  html {
+    overflow-x: hidden;
+  }
+  html:before {
+    content: ' ';
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    display: block;
+    background-image: url(/bg.svg);
+  }
+}
+
+
 @media (min-width: 500px) {
   html {
     background: linear-gradient(to top right, blue, red);

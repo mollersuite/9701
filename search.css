@@ -23,6 +23,10 @@ body {
   font-family: sans-serif;
 }
 
+input[type="search"] {
+  width: calc(100% - 100px);
+}
+
 input {
   border-radius: 1em;
   padding: 1em;

@@ -26,6 +26,7 @@
           <input type="submit" value="🔎" title="Search">
         </form>
         <small>tip: don't type anything in and click search to get a list of all tools!</small>
+        <br>
         <small>tip: get to search easily by pressing the tilde (`) key twice!</small>
       </div>
     </main>
@@ -38,12 +39,23 @@
        */
       const random = (...arr) => arr[Math.floor(Math.random() * arr.length)]
       document.getElementById('splash').innerText = random(
-        "have you seen my dog she's pretty cute",
+        "have you seen my dog, i think she's pretty cute you need to see her",
         'Welcome to 9701.ml',
         'Search 9701.ml',
         'molly moller is funny to me',
         "i'm stuck in a 9701.ml splash screen factory"
       )
+    </script>
+    <script type="module">
+      import { install } from 'https://cdn.skypack.dev/@github/hotkey'
+
+        const start = document.createElement('button')
+        start.dataset.hotkey = "` `"
+
+        start.addEventListener('click', () => {
+          document.getElementsByName('q').item(0).focus()
+        })
+        install(start)
     </script>
   </body>
 

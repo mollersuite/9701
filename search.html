@@ -21,6 +21,17 @@
       <h1>No results found.</h1>
       <p>Maybe try with another search?</p>
     </div>
+    <script type="module">
+      import { install } from 'https://cdn.skypack.dev/@github/hotkey'
+
+      const start = document.createElement('button')
+      start.dataset.hotkey = "` `"
+
+      start.addEventListener('click', () => {
+        document.getElementsByName('q').item(0).focus()
+      })
+      install(start)
+    </script>
   </body>
 
 </html>

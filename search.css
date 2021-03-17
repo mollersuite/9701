@@ -1,3 +1,11 @@
+article:focus-within {
+  background: rgba(0, 0, 0, .1);
+  box-shadow: 0 0 5px white;
+}
+body {
+  background: rgb(224, 224, 224);
+  color: black;
+}
 @media (prefers-color-scheme: dark) {
   body {
     background: #1a1a1a;
@@ -10,6 +18,21 @@
     color: white;
     background: #2a2a2a;
     border: solid 1px darkgray;
+  }
+  article:focus-within {
+    box-shadow: 0 0 5px black;
+    background: rgba(255, 255, 255, .1);
+  }
+}
+
+article {
+  padding: .5em;
+}
+
+@media (min-width: 415px) {
+  article {
+    padding: 1em;
+    margin: 1em;
   }
 }
 

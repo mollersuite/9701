@@ -2,11 +2,7 @@ article:focus-within {
   background: rgba(0, 0, 0, .1);
   box-shadow: 0 0 5px white;
 }
-html {
-  background: linear-gradient(to top right, blue, red);
-  min-height: 100%;
-  background-size: 100% 100%;
-}
+
 body {
   min-height: 100vh;
   background: rgb(224, 224, 224);
@@ -38,7 +34,17 @@ article {
   padding: .5em;
 }
 
-@media (min-width: 415px) {
+@media (min-width: 500px) {
+  html {
+    background: linear-gradient(to top right, blue, red);
+    min-height: 100%;
+    background-size: 100% 100%;
+  }
+  body {
+    margin-top: 1em;
+    min-height: calc(100vh - 2em);
+    border-radius: 1em;
+  }
   article {
     padding: 1em;
     margin: 1em;

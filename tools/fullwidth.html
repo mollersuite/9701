@@ -13,12 +13,16 @@
       <a href="/"><img src="/icon.svg" alt="9701.ml" width="100"></a>
     </header>
     <main>
-      <textarea name="input" id="input" cols="30" rows="10" placeholder="Type and your text will be automatically converted to fullwidth"></textarea>
+      <textarea name="input" id="input" cols="30" rows="10"
+        placeholder="Type and your text will be automatically converted to fullwidth"></textarea>
     </main>
     <script>
       const input = document.querySelector('#input')
-      input.addEventListener('input', () => {
+      input.addEventListener('input', function () {
+        const start = this.selectionStart
+        const end = this.selectionEnd
         input.value = input.value.replace(/[A-Za-z0-9]/g, s => String.fromCharCode(s.charCodeAt(0) + 0xfee0))
+        this.setSelectionRange(start, end);
       })
     </script>
     <script src="/newsearch.js" type="module"></script>

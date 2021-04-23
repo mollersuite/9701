@@ -40,6 +40,7 @@ input[type="search"]:focus, input[type="text"]:focus {
   main {
     background-image: url(/bg.svg);
     background-repeat: no-repeat;
+    background-size: cover;
   }
   input[type="search"], input[type="submit"], input[type="text"] {
     box-shadow: 0 0 10px black;

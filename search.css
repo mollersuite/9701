@@ -49,6 +49,7 @@ article {
     overflow: hidden;
     display: block;
     background-image: url(/bg.svg);
+    background-size: cover;
   }
 }
 

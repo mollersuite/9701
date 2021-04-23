@@ -20,24 +20,30 @@
         <textarea name="input" id="input" cols="30" rows="10" placeholder="type text here..."></textarea>
         <textarea name="output" id="output" cols="30" rows="10" placeholder="type antispace here..."></textarea>
         <br>
+        <label>
+          v3? (not compatible with v2 but is smaller)
+          <input type="checkbox" checked id="v3" />
+        </label>
+        <br>
         <small>output will be copied to your clipboard after typing in text since yknow it's invisible</small>
         <br>
         it's on npm: <code>npm i antispace</code>
       </div>
     </main>
     <script type="module">
-      import { encodev2, decodev2 } from 'https://cdn.skypack.dev/antispace'
+      import { encodev2, decodev2,encodev3,decodev3 } from 'https://cdn.skypack.dev/antispace@1.1'
 
       const input = document.querySelector('#input')
       const output = document.querySelector('#output')
+      const v3 = document.querySelector('#v3')
       input.addEventListener('input', () => {
-        output.value = encodev2(input.value)
+        output.value = (v3.checked ? encodev3 : encodev2)(input.value)
         if (output.value) {
           navigator.clipboard.writeText(output.value)
         }
       })
       output.addEventListener('input', () => {
-        input.value = decodev2(output.value.replace(/[a-z]|[A-Z]|\d/g, ''))
+        input.value = (v3.checked ? decodev3 : decodev2)(output.value.replace(/[a-z]|[A-Z]|\d/g, ''))
       })
     </script>
     <script src="/newsearch.js" type="module"></script>

@@ -43,7 +43,7 @@
         }
       })
       output.addEventListener('input', () => {
-        input.value = (v3.checked ? decodev3 : decodev2)(output.value.replace(/[a-z]|[A-Z]|\d/g, ''))
+        input.value = (v3.checked ? decodev3 : decodev2)(output.value.replace(/[a-z]|[A-Z]|\d|\n/g, ''))
       })
     </script>
     <script src="/newsearch.js" type="module"></script>

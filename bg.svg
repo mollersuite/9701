@@ -12,13 +12,68 @@
    inkscape:export-filename="C:\Users\Jack5\downloads\banner.png"
    height="1080"
    width="1920"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="banner.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   sodipodi:docname="bg.svg"
    id="svg12"
    version="1.1"
    viewBox="0 0 1920 1080">
+  <defs
+     id="defs8">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter999">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(255,167,159)"
+         result="flood"
+         id="feFlood989" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite991" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0"
+         result="blur"
+         id="feGaussianBlur993" />
+      <feOffset
+         dx="-20.0599"
+         dy="0"
+         result="offset"
+         id="feOffset995" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite997" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="2.1708333"
+     inkscape:cx="530.37941"
+     inkscape:cy="529.58811"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg12" />
   <style
-     id="style848"></style>
+     id="style848" />
   <metadata
      id="metadata18">
     <rdf:RDF>
@@ -27,13 +82,12 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
- 
   <path
-     style="stroke-width:14.7088;"
+     style="stroke-width:14.7088;filter:url(#filter999)"
      id="path10"
      d="m 2050.4517,-607.3049 c 176.5052,154.44207 376.5444,275.05396 463.3262,460.38444 85.3108,185.330465 58.8351,436.85046 -35.3011,695.72476 -92.6652,260.3452 -252.9908,528.0448 -457.4427,548.6371 -204.452,19.1214 -454.501,-210.3354 -722.2006,-330.9473 C 1029.6631,644.4113 741.3712,631.1734 566.33686,479.6731 391.30251,328.1728 330.99656,36.939105 441.31233,-160.15835 c 108.84488,-198.56837 388.31148,-304.4715 604.53037,-451.55918 216.2189,-147.08768 367.7192,-336.83079 520.6904,-336.83079 152.9712,0 307.4134,186.80135 483.9186,341.24342 z"
      fill="#ff0066" />

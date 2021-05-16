@@ -1,5 +1,5 @@
 body {
-  background: #1a1a1a;
+  background: black;
 }
 
 iframe {
@@ -15,24 +15,27 @@ a {
   color: skyblue;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   border-radius: 1em;
   min-width: 5ch;
   min-height: 5ch;
 }
 
-input[type="search"], input[type="submit"] {
+input[type='search'],
+input[type='submit'] {
   box-shadow: 0 0 10px white;
 }
 
-input[type="search"], input[type="text"] {
+input[type='search'],
+input[type='text'] {
   border-radius: 2em;
   padding: 1em;
   border: darkgray solid 0.2em;
   transition: 0.3s border-width;
 }
 
-input[type="search"]:focus, input[type="text"]:focus {
+input[type='search']:focus,
+input[type='text']:focus {
   border-width: 0.5em;
 }
 
@@ -43,20 +46,32 @@ input[type="search"]:focus, input[type="text"]:focus {
     background-size: cover;
     animation: pan 15s ease-in-out infinite alternate;
   }
-  input[type="search"], input[type="submit"], input[type="text"] {
+  input[type='search'],
+  input[type='submit'],
+  input[type='text'] {
     box-shadow: 0 0 10px black;
   }
 }
 
 body {
   color: white;
-  font-family: sans-serif;
+  font-family: ui-monospace, 'Cascadia Mono', 'Cascadia Code', 'Consolas',
+    'Segoe UI Mono', 'Ubuntu Mono', 'Roboto Mono', Menlo, Monaco, monospace;
 }
 
 main {
   color: white;
 }
-
+header {
+  display: flex;
+  align-items: center;
+}
+header img {
+  padding-right: 1em;
+}
+header::after {
+  content: '9701.ml';
+}
 main {
   position: absolute;
   top: 0;
@@ -87,7 +102,7 @@ form {
   align-items: center;
 }
 
-form>* {
+form > * {
   margin: 1em;
 }
 

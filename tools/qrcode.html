@@ -5,14 +5,16 @@
   <title>QR Code</title>
   <link rel="stylesheet" href="/tool.css">
   <link rel="icon" href="/icon.svg">
-  <meta name="theme-color" content="#ff0066">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Easy QR Code creator">
-<style>
-  #qr {
-    max-width: 200px;
-    width: calc(min(50vw, 50vh));
-  }
-</style>
+  <style>
+    #qr {
+      max-width: 200px;
+      width: calc(min(50vw, 50vh));
+    }
+
+  </style>
+
   <body>
     <header>
       <a href="/"><img src="/icon.svg" alt="9701.ml" width="100"></a>
@@ -20,7 +22,7 @@
     <main>
       <textarea name="input" id="input" cols="30" rows="10"
         placeholder="Type and your text will be turned into a QR Code"></textarea>
-        <img src="https://chart.googleapis.com/chart?chs=500x500&cht=qr" id="qr" alt="QR Code">
+      <img src="https://chart.googleapis.com/chart?chs=500x500&cht=qr" id="qr" alt="QR Code">
     </main>
     <script>
       const input = document.querySelector('#input')

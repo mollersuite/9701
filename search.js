@@ -16,6 +16,7 @@ function populateSearch({ items: tree }) {
   tree.forEach(async ele => {
     const text = await fetch(ele.path).then(res => res.text())
     const doc = new DOMParser().parseFromString(text, 'text/html')
+    if (doc.querySelector('meta[name="robots",content*="noindex"]')) {return}
     const result = document.createElement('article')
     const link = document.createElement('a')
     link.innerText = doc.querySelector('title').innerText || 'Name not found'

@@ -21,7 +21,7 @@ function canvas(type, extension) {
         }, type)
       }))
     },
-    type: 'image/'
+    type: ['image/png', 'image/jpeg']
   }
 }
 /**

@@ -3,59 +3,62 @@
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9701.ml</title>
-    <link rel="stylesheet" href="/tool.css">
-    <link rel="icon" href="/icon.svg">
-    <link rel="search" type="application/opensearchdescription+xml" title="9701.ml" href="/search.xml">
-    <meta name="description" content="Welcome to 9701.ml">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="manifest" href="manifest.json">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    >
+    <title>9701.ml BETA</title>
+    <script
+      type="module"
+      src="js/frontend/main.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="/tool.css"
+    >
+    <link
+      rel="icon"
+      href="/icon.svg"
+    >
+    <meta
+      name="description"
+      content="Welcome to 9701.ml"
+    >
+    <meta
+      name="theme-color"
+      content="#ffffff"
+    >
+    <link
+      rel="manifest"
+      href="manifest.json"
+    >
 
   </head>
 
   <body>
     <header>
-      <img src="/icon.svg" alt="9701.ml" width="100">
+      <img
+        src="/icon.svg"
+        alt="9701.ml"
+        width="100"
+      >
+      <span class="logo">9701.ml</span>
+      <span class="channel">BETA</span>
     </header>
     <main>
-      <div>
-        <h1 id="splash">Welcome to 9701.ml</h1>
-        <form action="/search.html" method="GET">
-          <input aria-label="Search" type="search" autofocus name="q" placeholder="Search 9701.ml">
-          <input type="submit" value="🔎" title="Search">
-        </form>
-        <small>tip: don't type anything in and click search to get a list of all tools!</small>
-        <br>
-        <small>tip: get to search easily by pressing the tilde (`) key twice!</small>
-      </div>
+        <h1>Welcome to 9701.ml</h1>
+        <p>Currently:</p>
+        <ul>
+          <li class="done">Image converter</li>
+          <li>Image compressor</li>
+          <li>Code minifier</li>
+          <li>Code beautifier</li>
+        </ul>
+        <input type="file" accept="image/*" />
     </main>
     <script>
-      console.log('%c     9701.ml', 'background: url(https://9701.ml/icon.svg); background-repeat: no-repeat; font-size: 5em; font-family: "Inter", sans-serif;');
-      console.log('Check out the source code at', 'https://github.com/9701ml/9701ml.github.io')
       console.log('162917.878.toString(26).substr(0, 7) == "9701.ml"')
-      /**
-       * @type {<Type>(...arr: Type[]) => Type}
-       */
-      const random = (...arr) => arr[Math.floor(Math.random() * arr.length)]
-      document.getElementById('splash').innerText = random(
-        "have you seen my dog, i think she's pretty cute you need to see her",
-        'Welcome to 9701.ml',
-        'Search 9701.ml',
-        'molly moller is funny to me',
-        "i'm stuck in a 9701.ml splash screen factory"
-      )
-    </script>
-    <script type="module">
-      import { install } from 'https://cdn.skypack.dev/@github/hotkey'
-
-      const start = document.createElement('button')
-      start.dataset.hotkey = "` `"
-
-      start.addEventListener('click', () => {
-        document.getElementsByName('q').item(0).focus()
-      })
-      install(start)
+      console.log('Check out the source code at https://github.com/mollersuite/9701.ml')
     </script>
   </body>
 

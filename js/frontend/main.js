@@ -8,7 +8,7 @@ const main = document.querySelector('main')
  * @param {string} name
  */
 function downloadURI(uri, name) {
-  const link = document.createElement("a")
+  const link = document.createElement('a')
   document.body.append(link)
   link.download = name
   link.href = uri
@@ -20,7 +20,16 @@ function downloadURI(uri, name) {
  * @param {File} file
  * @returns {import('./types').Option[]}
  */
-const get_options = file => options.filter(option => Array.isArray(option.type) ? option.type.some(type => file.type.startsWith(type)) : file.type.startsWith(option.type))
+const get_options = (file) => {
+  return options.filter((option) => {
+    const types = Array.isArray(option.type) ? option.type : [option.type]
+    return types.some((type) =>
+      type.startsWith('.')
+        ? file.name.endsWith(type)
+        : file.type.startsWith(type)
+    )
+  })
+}
 
 input.addEventListener('change', () => {
   const file = input.files.item(0)
@@ -28,7 +37,7 @@ input.addEventListener('change', () => {
     const btn = document.createElement('button')
     btn.textContent = option.name
     btn.addEventListener('click', async () => {
-      const {file:blob,name} = await option.run(file)
+      const { file: blob, name } = await option.run(file)
       downloadURI(URL.createObjectURL(blob), name)
     })
     main.append(btn)

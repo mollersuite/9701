@@ -16,19 +16,15 @@ a {
   color: skyblue;
 }
 
-@media (min-width: 1122px) {
-  body {
-    background-image: url(/bg.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    animation: pan 15s ease-in-out infinite alternate;
-  }
-}
-
 body {
   color: white;
   font-family: ui-monospace, 'Cascadia Mono', 'Cascadia Code', 'Consolas',
     'Segoe UI Mono', 'Ubuntu Mono', 'Roboto Mono', Menlo, Monaco, monospace;
+
+  background-image: url(/bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: pan 15s ease-in-out infinite alternate;
 }
 
 main {
@@ -62,7 +58,7 @@ main {
     background-position: 0% 0%;
   }
   to {
-    background-position: left;
+    background-position: 0% 20%;
   }
 }
 
@@ -72,10 +68,12 @@ li {
 li.done::before {
   content: '✔';
   color: greenyellow;
-  margin-left: -20px; margin-right: 10px;
+  margin-left: -20px;
+  margin-right: 10px;
 }
 li:not(.done)::before {
   content: '✖';
   color: red;
-  margin-left: -20px; margin-right: 10px;
+  margin-left: -20px;
+  margin-right: 10px;
 }
